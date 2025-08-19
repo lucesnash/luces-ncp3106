@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nash Luces - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    
+</head>
+
+<body>
+  <!-- Navigation -->
+  <div id="navbarPage1">
+    <div class="nav-links">
+      <a href="#page1" onclick="scrollToPage('page1')">HOME</a>
+      <a href="#page2" onclick="scrollToPage('page2')">EDUCATION</a>
+      <a href="#page3" onclick="scrollToPage('page3')">PROJECTS</a>
+      <a href="#page4" onclick="scrollToPage('page4')">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Page 2 Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbarPage2">
+    <div class="container">
+      <a class="navbar-brand" href="#page1" onclick="scrollToPage('page1')">NASH LUCES</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#page1" onclick="scrollToPage('page1')">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#page2" onclick="scrollToPage('page2')">EDUCATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#page3" onclick="scrollToPage('page3')">PROJECTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#page4" onclick="scrollToPage('page4')">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- UPDATED: Page 1 - Home with Adjusted Name Layout -->
+  <section class="page fade-in" id="page1">
+    <div class="hero-container">
+      <div class="hero-text">
+        <div class="greeting">Hi, I'M</div>
+        <!-- UPDATED: Name layout with NASH centered and LUCES moved slightly right -->
+        <h1>NASH<span class="name-highlight">LUCES</span></h1>
+        <div class="subtitle">Computer Engineering Student</div>
+        <div class="description">
+          As a prospective computer engineering student, I am dedicated to building a strong foundation in hardware and software systems, with a focus on developing innovative and practical technology solutions.
+        </div>
+        <div class="quote">
+          "The biggest risk is not taking any risk."
+        </div>
+      </div>
+      
+      <div class="hero-profile">
+        <img src="prof.png" alt="Nash Luces" class="profile-img">
+        <div class="stats-section">
+          <div class="stat-item">
+            <h3>3</h3>
+            <p>Projects</p>
+          </div>
+          <div class="stat-item">
+            <h3>3rd Year</h3>
+            <p>Computer Engineering</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/1CWKR3oa8i/"><img src="fb.png" alt="Social 1"></a>
+      <a href="https://www.instagram.com/nashhhhhhhhu?igsh=MTVxY3JvYzFteGh3NQ=="><img src="ig.png" alt="Social 2"></a>
+      <a href="luces.nash@ue.edu.ph"><img src="mail.png" alt="Social 2"></a>
+      <a href="https://github.com/lucesnash/luces-ncp3106"><img src="git.jpg" alt="Social 3"></a>
+    </div>
+  </section>
+  
+  <!-- UPDATED: Page 2 - Education with Modal Functionality -->
+  <section class="page fade-in" id="page2">
+    <div class="container">
+      <h2 class="text-center mb-5 text-accent" style="font-size: 3rem; font-weight: 800;">My Education</h2>
+      
+      <div class="row g-4">
+        <!-- High School -->
+        <div class="col-lg-4">
+          <div class="edu-card" onclick="openEducationModal('highschool')">
+            <div class="edu-img">
+              <img src="BNHSLOGO.jpg" alt="High School">
+            </div>
+            <div class="edu-text">
+              <h5>HIGH SCHOOL</h5>
+              <div class="edu-year">Graduated: 2021</div>
+              <p class="edu-description">
+                BOCANA NATIONAL HIGH SCHOOL
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Senior High School -->
+        <div class="col-lg-4">
+          <div class="edu-card" onclick="openEducationModal('seniorhigh')">
+            <div class="edu-img">
+              <img src="PMMSLOGO.jpg" alt="Senior High School">
+            </div>
+            <div class="edu-text">
+              <h5>SENIOR HIGH SCHOOL</h5>
+              <div class="edu-year">Graduated: 2023</div>
+              <p class="edu-description">
+                PHILIPPINE MERCHANT MARINE SCHOOL
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- College -->
+        <div class="col-lg-4">
+          <div class="edu-card" onclick="openEducationModal('college')">
+            <div class="edu-img">
+              <img src="uelogo.jpg" alt="College">
+            </div>
+            <div class="edu-text">
+              <h5>COLLEGE</h5>
+              <div class="edu-year">Present - 3rd Year</div>
+              <p class="edu-description">
+                UNIVERSITY OF THE EAST
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPDATED: Page 3 - Projects with Your Actual Image Names and Click Functionality -->
+  <section class="page fade-in" id="page3">
+    <div class="container">
+      <h2 class="text-center mb-5 text-accent" style="font-size: 3rem; font-weight: 800;">Latest Projects</h2>
+      
+      <div class="row g-4">
+      
+        <div class="col-lg-4">
+          <div class="project-card" onclick="openProjectModal('inbetween')">
+            <div id="carouselProj1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="inbetween.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="IN1.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="IN2.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="IN3.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselProj1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselProj1" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            <div class="p-3">
+              <h5 class="text-center">In Between Game</h5>
+              <p class="text-center text-muted">Click to view details</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tic Tac Toe Game -->
+        <div class="col-lg-4">
+          <div class="project-card" onclick="openProjectModal('tictactoe')">
+            <div id="carouselProj2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="tictactoe1.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="T1.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="T2.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="T3.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="T4.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="T5.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselProj2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselProj2" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            <div class="p-3">
+              <h5 class="text-center">Tic Tac Toe Game</h5>
+              <p class="text-center text-muted">Click to view details</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hi-Lo Game -->
+        <div class="col-lg-4">
+          <div class="project-card" onclick="openProjectModal('hilo')">
+            <div id="carouselProj3" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="hilogame.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="hilogame1.JPG" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="h2.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="h3.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="h4.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="h5.jpg" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselProj3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselProj3" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            <div class="p-3">
+              <h5 class="text-center">Hi-Lo Game</h5>
+              <p class="text-center text-muted">Click to view details</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 4 - Contact -->
+  <section class="page fade-in" id="page4">
+    <div class="container">
+      <h2 class="text-center mb-5 text-accent" style="font-size: 3rem; font-weight: 800;">Contact Me</h2>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Subject" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="6" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-info btn-lg px-5">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION MODALS -->
+  
+  <!-- High School Modal -->
+  <div class="education-modal" id="highschoolModal">
+    <div class="education-modal-overlay" onclick="closeEducationModal('highschool')"></div>
+    <div class="education-modal-content">
+      <span class="education-close-btn" onclick="closeEducationModal('highschool')">&times;</span>
+      
+      <div class="education-modal-layout">
+        <!-- Left Side - Education Overview -->
+        <div class="education-overview">
+          <h2 class="education-overview-title">Education Details</h2>
+          <div class="year-badge">2017 - 2021</div>
+          <div class="location-badge">Bocana, Ilog, Negros Occidental</div>
+          <p class="education-description">
+            I graduated from this school where I built a good foundation in learning. During my time here, I improved my problem-solving and thinking skills. The school gave me the knowledge and preparation I needed for senior high school and the challenges ahead.
+          </p>
+        </div>
+        
+        <!-- Right Side - School Name -->
+        <div class="image-box">
+          <h3 class="education-school-name">BOCANA NATIONAL HIGH SCHOOL</h3>
+          <img src="BNHS.jpg" alt="My Portrait" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Senior High School Modal -->
+  <div class="education-modal" id="seniorhighModal">
+    <div class="education-modal-overlay" onclick="closeEducationModal('seniorhigh')"></div>
+    <div class="education-modal-content">
+      <span class="education-close-btn" onclick="closeEducationModal('seniorhigh')">&times;</span>
+      
+      <div class="education-modal-layout">
+        <!-- Left Side - Education Overview -->
+        <div class="education-overview">
+          <h2 class="education-overview-title">Education Details</h2>
+          <div class="year-badge">2021 - 2023</div>
+          <div class="location-badge">Las Pinas</div>
+          <p class="education-description">
+            I graduated from this maritime-focused school where I took the STEM track. I learned advanced math, science, and engineering concepts that grew my interest in technology. The lessons and activities prepared me well for college and my future studies.
+          </p>
+        </div>
+        
+        <!-- Right Side - School Name -->
+        <div class="image-box">
+          <img src="PMMS.jpg" alt="My Portrait" />
+          <h3 class="education-school-name">PHILIPPINE MERCHANT MARINE SCHOOL</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- College Modal -->
+  <div class="education-modal" id="collegeModal">
+    <div class="education-modal-overlay" onclick="closeEducationModal('college')"></div>
+    <div class="education-modal-content">
+      <span class="education-close-btn" onclick="closeEducationModal('college')">&times;</span>
+      
+      <div class="education-modal-layout">
+        <!-- Left Side - Education Overview -->
+        <div class="education-overview">
+          <h2 class="education-overview-title">Education Details</h2>
+          <div class="year-badge">2023 - Present</div>
+          <div class="location-badge">Sampaloc, Manila City</div>
+          <p class="education-description">
+            I am currently taking Computer Engineering at this university. I am learning both hardware and software, working on projects that improve my skills. The program gives me hands-on experience and prepares me for a career in technology.
+          </p>
+        </div>
+        
+        <!-- Right Side - School Name -->
+        <div class="image-box">
+          <img src="UE.jpg" alt="My Portrait" />
+          <h3 class="education-school-name">UNIVERSITY OF THE EAST</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT MODALS -->
+ 
+  <div class="project-modal" id="inbetweenModal">
+    <div class="project-modal-overlay" onclick="closeProjectModal('inbetween')"></div>
+    <div class="project-modal-content">
+      <span class="project-close-btn" onclick="closeProjectModal('inbetween')">&times;</span>
+      
+      <div class="project-modal-layout">
+        <!-- Left Side - Project Overview -->
+        <div class="project-overview">
+          <h2 class="project-overview-title">Project Overview</h2>
+          <p class="project-description">
+           A fun Tic Tac Toe game where two players can compete against each other. It has a simple design, smooth gameplay, score tracking, and a reset button so the game can go on endlessly.
+          </p>
+          
+          <div class="project-details">
+            <h4>Programming Languages:</h4>
+            <div class="tech-badges">
+              <span class="tech-badge">Kotlin</span>
+              
+            </div>
+            
+          
+            
+            <h4>Partners:</h4>
+            <div class="partner-badges">
+              <span class="partner-badge">Sebastian Estacio</span>
+              <span class="partner-badge">Nash Luces</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Side - Project Gallery -->
+        <div class="project-gallery">
+          <h2 class="project-gallery-title">In Between Game</h2>
+          
+          <div id="inbetModalCarousel" class="carousel slide project-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="inbetween.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+              <div class="carousel-item">
+                <img src="IN1.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+              <div class="carousel-item">
+                <img src="IN2.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+              <div class="carousel-item">
+                <img src="IN3.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#inbetModalCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#inbetModalCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tic Tac Toe Game Modal -->
+  <div class="project-modal" id="tictactoeModal">
+    <div class="project-modal-overlay" onclick="closeProjectModal('tictactoe')"></div>
+    <div class="project-modal-content">
+      <span class="project-close-btn" onclick="closeProjectModal('tictactoe')">&times;</span>
+      
+      <div class="project-modal-layout">
+        <!-- Left Side - Project Overview -->
+        <div class="project-overview">
+          <h2 class="project-overview-title">Project Overview</h2>
+          <p class="project-description">
+            A classic Tic Tac Toe game implementation with an intuitive interface and smooth gameplay experience. Features player vs player mode with score tracking and reset functionality for endless entertainment.
+          </p>
+          
+          <div class="project-details">
+            <h4>Programming Languages:</h4>
+            <div class="tech-badges">
+              <span class="tech-badge">Kotlin</span>
+              
+            </div>
+            
+            
+            
+            <h4>Partners:</h4>
+            <div class="partner-badges">
+              <span class="partner-badge">Sebastian Estacio</span>
+              <span class="partner-badge">Nash Luces</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Side - Project Gallery -->
+        <div class="project-gallery">
+          <h2 class="project-gallery-title">Tic Tac Toe Game</h2>
+          
+          <div id="tictactoeModalCarousel" class="carousel slide project-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="tictactoe1.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+              <div class="carousel-item">
+                <img src="T1.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+              <div class="carousel-item">
+                <img src="T2.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+              <div class="carousel-item">
+                <img src="T3.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+              <div class="carousel-item">
+                <img src="T4.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+              <div class="carousel-item">
+                <img src="T5.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#tictactoeModalCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#tictactoeModalCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hi-Lo Game Modal -->
+  <div class="project-modal" id="hiloModal">
+    <div class="project-modal-overlay" onclick="closeProjectModal('hilo')"></div>
+    <div class="project-modal-content">
+      <span class="project-close-btn" onclick="closeProjectModal('hilo')">&times;</span>
+      
+      <div class="project-modal-layout">
+        <!-- Left Side - Project Overview -->
+        <div class="project-overview">
+          <h2 class="project-overview-title">Project Overview</h2>
+          <p class="project-description">
+            A fun number guessing game where players try to guess if the next number will be higher or lower. Features multiple difficulty levels, score tracking, and an engaging user interface for an exciting gaming experience.
+          </p>
+          
+          <div class="project-details">
+            <h4>Programming Languages:</h4>
+            <div class="tech-badges">
+              <span class="tech-badge">Kotlin</span>
+              
+            </div>
+            
+          
+            
+            <h4>By:</h4>
+            <div class="partner-badges">
+              
+              <span class="partner-badge">Nash Luces</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Side - Project Gallery -->
+        <div class="project-gallery">
+          <h2 class="project-gallery-title">Hi-Lo Game</h2>
+          
+          <div id="hiloModalCarousel" class="carousel slide project-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="hilogame.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+              <div class="carousel-item">
+                <img src="hilogame1.JPG" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+              <div class="carousel-item">
+                <img src="h2.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+              <div class="carousel-item">
+                <img src="h3.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+              <div class="carousel-item">
+                <img src="h4.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+              <div class="carousel-item">
+                <img src="h5.jpg" class="d-block w-100" onclick="showImage(this.src)">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#hiloModalCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#hiloModalCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Modal -->
+  <div class="image-modal" id="imageModal">
+    <span class="close-btn" onclick="closeImageModal()">&times;</span>
+    <img id="modalImage" src="" alt="Modal Image">
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Smooth scrolling function
+    function scrollToPage(pageId) {
+      document.getElementById(pageId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Navbar visibility handler
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let navbar1 = document.getElementById('navbarPage1');
+      let navbar2 = document.getElementById('navbarPage2');
+      
+      // Page 1 navbar logic
+      if (window.pageYOffset > window.innerHeight * 0.3) {
+        navbar1.classList.add('hidden');
+        navbar2.classList.add('show');
+      } else {
+        navbar1.classList.remove('hidden');
+        navbar2.classList.remove('show');
+      }
+      
+      lastScrollTop = scrollTop;
+    });
+
+    // Fade-in animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all fade-in elements
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Education modal functions
+    function openEducationModal(educationId) {
+      const modal = document.getElementById(educationId + 'Modal');
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeEducationModal(educationId) {
+      const modal = document.getElementById(educationId + 'Modal');
+      modal.classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Project modal functions
+    function openProjectModal(projectId) {
+      const modal = document.getElementById(projectId + 'Modal');
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal(projectId) {
+      const modal = document.getElementById(projectId + 'Modal');
+      modal.classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Image modal functions
+    function openImageModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageSrc;
+      modal.classList.add('show');
+    }
+
+    function showImage(imageSrc) {
+      openImageModal(imageSrc);
+    }
+
+    function closeImageModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('show');
+    }
+
+    // Close modal when clicking outside the image
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeImageModal();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        // Close project modals
+        document.querySelectorAll('.project-modal.show').forEach(modal => {
+          modal.classList.remove('show');
+          document.body.style.overflow = 'auto';
+        });
+        // Close education modals
+        document.querySelectorAll('.education-modal.show').forEach(modal => {
+          modal.classList.remove('show');
+          document.body.style.overflow = 'auto';
+        });
+        // Close image modal
+        const imageModal = document.getElementById('imageModal');
+        if (imageModal.classList.contains('show')) {
+          imageModal.classList.remove('show');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
