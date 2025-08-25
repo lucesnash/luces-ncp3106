@@ -110,7 +110,7 @@
       width: 100%;
     }
 
-    /* UPDATED: Navbar Page 2 Gray-Black-Dark White Theme */
+    /* UPDATED: Navbar Page 2 with Fixed Underline Effect */
     #navbarPage2 {
       display: none;
       opacity: 0;
@@ -120,15 +120,37 @@
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border-gray);
     }
+
     #navbarPage2 .navbar-brand,
     #navbarPage2 .nav-link {
       color: var(--accent) !important;
       font-weight: 500;
+      position: relative;
+      transition: all 0.3s ease;
+      display: inline-block;
     }
+
+    #navbarPage2 .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 5px;
+      left: 50%;
+      background-color: var(--accent);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+
     #navbarPage2 .nav-link:hover {
       color: var(--accent-secondary) !important;
-      text-shadow: 0 0 8px var(--accent);
     }
+
+    #navbarPage2 .nav-link:hover::after {
+      width: 100%;
+    }
+
     #navbarPage2.show {
       display: block;
     }
@@ -278,12 +300,11 @@
     /* Social Icons */
     .social-icons {
       position: absolute;
-
-      transform: translateX(-50%);
-      bottom: 50px;   /* stick to bottom */
-      left: 300px; 
+      bottom: 50px;
+      left: 300px;
       display: flex;
       gap: 20px;
+      transform: translateX(-50%);
     }
 
     .social-icons a {
@@ -303,6 +324,25 @@
       filter: brightness(1.2) grayscale(0%);
       transform: scale(1.1) translateY(-5px);
     }
+
+    /* Mobile Responsiveness for Social Icons */
+    @media (max-width: 992px) {
+      .social-icons {
+        right: 30px;
+        left: auto;
+        bottom: 31%;
+        transform: translateY(50%);
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .social-icons img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    
 
     /* UPDATED: Other Pages Gray-Black-Dark White Theme */
     #page2, #page4 { 
@@ -333,9 +373,10 @@
 
     .project-card .carousel {
       width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
+      border-radius: 12px;
+      height: auto;
+      display: block;
+      object-fit: contain;
       overflow: hidden;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
       transition: all 0.3s ease;
@@ -408,7 +449,7 @@
     .project-close-btn, .education-close-btn {
       position: absolute;
       top: 20px;
-      right: 25px;
+      right: 20px;
       font-size: 35px;
       color: var(--accent);
       cursor: pointer;
@@ -836,6 +877,137 @@
         object-fit: cover;
         border-radius: 25px; /* Rounded slightly */
     }
+
+   /* Contact Content */
+  .contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact-description {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    font-weight: 400;
+  }
+
+  /* Contact Icons */
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 50px;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contact-item a {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+
+  .contact-icons img {
+    width: 70px;
+    height: 70px;
+    filter: grayscale(100%) brightness(0.8);
+    transition: all 0.3s ease;
+    border-radius: 15px;
+  }
+
+  .contact-icons a:hover img {
+    filter: brightness(1.2) grayscale(0%);
+    transform: scale(1.15) translateY(-8px);
+  }
+
+  .contact-item a:hover {
+    transform: translateY(-5px);
+  }
+
+  .contact-label {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+
+  .contact-item:hover .contact-label {
+    color: var(--accent);
+  }
+
+  .contact-footer-text {
+    color: var(--text-gray);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 40px;
+  }
+
+  /* Copyright */
+  .copyright {
+    text-align: center;
+    margin-top: 80px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border-gray);
+  }
+
+  .copyright p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+
+  /* Mobile Responsiveness for Contact */
+  @media (max-width: 768px) {
+    .contact-icons {
+      gap: 40px;
+    }
+
+    .contact-icons img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .contact-description {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .contact-icons {
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .contact-icons img {
+      width: 55px;
+      height: 55px;
+    }
+
+    .contact-description {
+      font-size: 1rem;
+      margin-bottom: 35px;
+    }
+
+
+    .copyright {
+      margin-top: 60px;
+    }
+
+    .copyright p {
+      font-size: 0.8rem;
+    }
+  }
 
 
 
